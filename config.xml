@@ -29,7 +29,8 @@
 		<preference name="SuppressesIncrementalRendering" value="false" />
 		<preference name="android-minSdkVersion" value="15" />
 		<preference name="android-maxSdkVersion" value="26" />
-		<preference name="android-installLocation" value="auto" />
+		<preference name="android-targetSdkVersion" value="28" />
+        <preference name="android-installLocation" value="auto" />
 		<preference name="SplashScreenDelay" value="5000" />
 		<preference name="ErrorUrl" value=""/>
 		<preference name="BackgroundColor" value="0x000000"/>
@@ -41,11 +42,11 @@
 		<preference name="android-build-tool" value="gradle" />
 		<platform name="android" />
 		<feature name="http://api.phonegap.com/1.0/network"/>		
-		<plugin name="cordova-plugin-inappbrowser"  source="npm"/>
-		<plugin name="cordova-plugin-network-information" source="npm" />
-		<plugin name="cordova-plugin-splashscreen" source="npm"/>
-		<plugin name="cordova-plugin-whitelist" source="npm"/>
-		<plugin name="cordova-plugin-statusbar" source="npm"/>
+		<plugin name="cordova-plugin-inappbrowser" />
+		<plugin name="cordova-plugin-network-information" />
+		<plugin name="cordova-plugin-splashscreen" />
+		<plugin name="cordova-plugin-whitelist" />
+		<plugin name="cordova-plugin-statusbar" />
 		<icon src="res/icon/android/icon-36-ldpi.png" platform="android" density="ldpi" />
 		<icon src="res/icon/android/icon-48-mdpi.png" platform="android" density="mdpi" />
 		<icon src="res/icon/android/icon-72-hdpi.png" platform="android" density="hdpi" />
