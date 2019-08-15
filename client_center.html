@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<meta charset="utf-8"> 
+	<title>Company Name</title> 
+	<meta id="Viewport" name="viewport">     
+	<script src="plugins/jquery-1.10.2.min.js"></script>  
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="plugins/main.js"></script>
+    <script src="cordova.js"></script>
+	<script type="text/javascript">    
+    $(function(){
+		  var ww = ( $(window).width() < window.screen.width ) ? $(window).width() : window.screen.width; 
+		  var mw = 1080;
+		  var ratio =  ww / mw;
+		  $('#Viewport').attr('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=yes, width=' + ww);
+	}); 
+	
+	var currentPage = window.location.href;
+	window.sessionStorage.setItem("page",currentPage);														
+	</script>
+</head> 
+<body> 
+<div id="iba_main">
+
+	<div data-role="content" data-enhance="false">
+    <img src="images/top_big.png" width="1080" height="533">
+	
+    <div class="login_bg">
+    	<a href="index.html" class="login_back"></a>
+    	<form id="login_form">
+            <input type="text" name="username" id="username" value="" class="login" style="top:165px;" />
+            <input type="password" name="password" id="password" value="" class="login" style="top:265px;" />
+        <input type="submit" value="" id="login">
+        </form>
+        
+        <div class="login_alert">
+   		<div class="loading_spinner"><img src="images/loading.gif" width="128" height="128"></div>
+        <script>
+		
+			var currentPage = window.location.href;
+			window.sessionStorage.setItem("page",currentPage);
+		
+		$('#login_form').submit(function(event) {
+
+			var user = $("#username").val()
+			var pass = $("#password").val()
+			
+			if(user && pass){
+				
+			$.ajax({
+					type: "GET",
+					url: "http://www.wecooks.com/zanan/iba_server/login.php?login="+ user +"&pass="+ pass +"",
+					jsonp: "callback",
+					dataType: "jsonp",
+					crossDomain: true,
+					beforeSend: function() { $( ".loading_spinner" ).show(); },
+					success: function(data) {
+						
+					$( ".loading_spinner" ).hide();
+				
+					if(data.iba.status=='ok'){ window.location="cc.html"; }					
+					else{
+							$('.login_alert').html('<div style="margin-left:50px;">Incorrect login or password</div>');				
+					}					
+																						
+					},
+					error: function(){
+					alert("Connection problem...");
+					}
+				});	
+			} else {
+								
+				$('.login_alert').html('<div style="margin-left:50px;">Not specified username or password</div>');									
+			}
+			event.preventDefault();
+		})		
+    	</script>
+        </div>
+    </div>
+        
+    <div class="bottom"></div>   
+      
+    </div>
+
+</div>
+</body>
+</html>

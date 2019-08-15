@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<meta charset="utf-8"> 
+	<title>Company Name</title> 
+	<meta id="Viewport" name="viewport">     
+	<script src="plugins/jquery-1.10.2.min.js"></script>  
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="plugins/main.js"></script>
+    <script src="cordova.js"></script>
+	<script type="text/javascript">    
+    $(function(){
+		  var ww = ( $(window).width() < window.screen.width ) ? $(window).width() : window.screen.width; 
+		  var mw = 1080;
+		  var ratio =  ww / mw;
+		  $('#Viewport').attr('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=yes, width=' + ww);
+	}); 
+		
+	document.addEventListener("deviceready", onDeviceReady, false);
+	function onDeviceReady() { StatusBar.hide(); }	
+		
+	var currentPage = window.location.href;
+	window.sessionStorage.setItem("page",currentPage);														
+	</script>
+</head> 
+<body> 
+<div id="iba_main">
+
+	<div data-role="content" data-enhance="false">
+    <img src="images/top_big.png" width="1080" height="533">
+	<div class="main_menu">
+   	    <div class="menu_bg"><a href="about_us.html" id="m1" class="menu_ico"></a></div>
+        <div class="menu_bg"><a href="services.html" id="m2" class="menu_ico"></a></div>
+        <div class="menu_bg"><a href="work.html" id="m3" class="menu_ico"></a></div>
+        <div class="menu_bg"><a href="gallery.html" id="m4" class="menu_ico"></a></div>
+        <div class="menu_bg"><a href="client_center.html" id="m5" class="menu_ico"></a></div>
+        <div class="menu_bg"><a href="contact.html" id="m6" class="menu_ico"></a></div>
+        <div class="menu_bg"><a href="geo:49.883567, 19.493643?q=Jana Pawła II 1, 34-100 Wadowice" id="m7" class="menu_ico"></a></div>
+        <div class="menu_bg"><a href="news.html" id="m8" class="menu_ico"></a></div>
+        <div class="menu_bg"><a href="tel:+11-111-111-111" id="m9" class="menu_ico"></a></div>
+    </div>    
+    <div class="bottom"></div>   
+
+    </div>
+
+</div>
+</body>
+</html>

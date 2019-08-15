@@ -1,0 +1,177 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<meta charset="utf-8"> 
+	<title>Company Name</title> 
+	<meta id="Viewport" name="viewport">     
+	<script src="plugins/jquery-1.10.2.min.js"></script>  
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="plugins/main.js"></script>    
+    <script src="cordova.js"></script>
+	<script type="text/javascript">    
+    $(function(){
+		  var ww = ( $(window).width() < window.screen.width ) ? $(window).width() : window.screen.width; 
+		  var mw = 1080;
+		  var ratio =  ww / mw;
+		  $('#Viewport').attr('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=yes, width=' + ww);
+	}); 
+    </script>
+</head> 
+<body> 
+<div id="iba_main">
+
+	<div data-role="content" data-enhance="false">    	
+    <div class="top_small">
+    	<a href="index.html" class="logo_small"></a>
+    	<div class="menu2_bg">
+            <a href="#" class="menu_on"></a>
+   			<a href="#" class="menu_off"></a>
+        </div>
+    </div>    
+    <div class="ci_main">
+    
+    	<div class="deployed-navigation">
+            <a href="index.html" id="menu1" class="navigation-icon"><div class="menu_top_margin"></div>Home</a>
+            <a href="news.html" id="menu2" class="navigation-icon"><div class="menu_top_margin"></div>News</a>
+            <a href="about_us.html" id="menu3" class="navigation-icon"><div class="menu_top_margin"></div>About us</a>
+            <a href="services.html" id="menu4" class="navigation-icon"><div class="menu_top_margin"></div>Services</a>
+            <a href="work.html" id="menu5" class="navigation-icon"><div class="menu_top_margin"></div>Work</a>
+            <a href="gallery.html" id="menu6" class="navigation-icon"><div class="menu_top_margin"></div>Gallery</a>
+            <a href="client_center.html" id="menu7" class="navigation-icon"><div class="menu_top_margin"></div>Client Center</a>
+            <a href="contact.html" id="menu8" class="navigation-icon"><div class="menu_top_margin"></div>Contact</a>
+    		<a href="geo:49.883567, 19.493643?q=Jana Pawła II 1, 34-100 Wadowice" id="menu9" class="navigation-icon"><div class="menu_top_margin"></div>Map</a>
+            <a href="tel:+11-111-111-111" id="menu10" class="navigation-icon"><div class="menu_top_margin"></div>Call us</a>
+        </div>
+    
+    
+    	<div style="width:100%; height:20px;"></div> 
+        <img src="images/contact.png" width="932" height="192" style="margin:40px auto 40px auto; display:block;">
+		<div id="js_all">        		                 
+        <div class="loading_spinner_all"><img src="images/loading.gif" width="128" height="128"></div>
+        <script type="text/javascript">
+    			var previouspage = window.sessionStorage.getItem("page");
+				var currentPage = window.location.href;
+				window.sessionStorage.setItem("page",currentPage); 
+				$('.top_small').append('<a href="'+ previouspage +'" class="back_small"></a>');
+	    </script>
+        
+        <div class="information_all">
+        	<div class="information_top_2">
+        	</div>
+            <div class="information_main">
+            	<div class="information_description">
+            		<div style="margin-left:30px;">
+                        <div style="font-family:oswald-bold;">Address:</div>
+                        Company Name<br />
+                        City<br />
+                        Street<br />
+                        Zip Code
+                    </div>
+                    <a href="tel:+11-111-111-111" class="contact_phone">
+                    	<div class="contact_phone_txt"><span style="font-family:oswald-bold;">Name Surname:</span> +11 111 111 111</div>
+                    	<div class="contact_phone_txt2">name@your-mail.com</div>
+                    </a>
+                    <a href="tel:+11-111-111-111" class="contact_phone">
+                    	<div class="contact_phone_txt"><span style="font-family:oswald-bold;">Name Surname:</span> +11 111 111 111</div>
+                    	<div class="contact_phone_txt2">name@your-mail.com</div>
+                    </a>
+                    <div style="margin-left:30px;">
+                        company.mail@mail.com<br />
+                        www.your-company-web.com<br />
+                    </div>
+            	</div>
+            </div>
+            <a href="news.html" class="information_bottom"></a>
+        </div>
+        
+        <div class="kontakt_1_bg">
+        	<a href="menu.html" class="kontakt_back"></a>
+        	<form id="mail_form">
+    		<input type="text" name="name" id="name" class="form_input" style="top:145px;" required >
+    		<input type="text" name="email" id="email" class="form_input" style="top:250px;" required >
+    		<input type="text" name="phone" id="phone" class="form_input" style="top:350px;">
+    		<textarea name="message" class="form_textarea" id="message" required ></textarea>
+    		<input type="submit" name="submit" value="" id="kontakt_btn">
+    		</form>
+            <div class="mail_alert">
+            <div class="loading_spinner"><img src="images/loading.gif" width="128" height="128"></div>
+            <script>
+            $('#mail_form').submit(function(event) {
+    
+                var name = $("#name").val()
+                var email = $("#email").val()
+				var phone = $("#phone").val()
+                var message = $("#message").val()
+								               
+                if(name && email && message){
+                    
+					if(phone){
+						
+						$.ajax({
+								type: "GET",
+								url: "http://www.wecooks.com/zanan/iba_server/mail.php?name="+ name +"&email="+ email +"&message="+ message +"&phone="+ phone +"",
+								jsonp: "callback",
+								dataType: "jsonp",
+								crossDomain: true,
+								beforeSend: function() { $( ".loading_spinner" ).show(); },
+								success: function(data) {
+									
+								$( ".loading_spinner" ).hide();
+							
+								if(data.mail.status=='ok'){ $('.mail_alert').html('<div style="color:#10752c;">Email has been sent</div>'); }
+								if(data.mail.status=='nam'){ $('.mail_alert').html('<div style="color:#b20701;">Invalid email address</div>'); }
+								if(data.mail.status=='no'){ $('.mail_alert').html('<div style="color:#b20701;">Error: Try again</div>'); }					
+																									
+								},
+								error: function(){
+								alert("Connection problem...");
+								}
+							});
+							
+					} else {
+						
+						$.ajax({
+								type: "GET",
+								url: "http://www.wecooks.com/zanan/iba_server/mail.php?name="+ name +"&email="+ email +"&message="+ message +"",
+								jsonp: "callback",
+								dataType: "jsonp",
+								crossDomain: true,
+								beforeSend: function() { $( ".loading_spinner" ).show(); },
+								success: function(data) {
+									
+								$( ".loading_spinner" ).hide();
+							
+								if(data.mail.status=='ok'){ $('.mail_alert').html('<div style="color:#10752c;">Email has been sent</div>'); }
+								if(data.mail.status=='nam'){ $('.mail_alert').html('<div style="color:#b20701;">Invalid email address</div>'); }
+								if(data.mail.status=='no'){ $('.mail_alert').html('<div style="color:#b20701;">Error: Try again</div>'); }					
+																									
+								},
+								error: function(){
+								alert("Connection problem...");
+								}
+							});
+						
+					}
+						
+                } else {
+                                    
+                    $('.mail_alert').html('<div style="color:#b20701;">Fill in all required fields</div>');									
+                }
+                event.preventDefault();
+            })		
+            </script>
+            </div>
+        </div>    
+        
+        </div>
+        <div style="width:100%; height:20px;"></div>
+        
+        
+    </div>    
+    <div class="bottom"></div>   
+      
+    </div>
+
+</div>
+</body>
+</html>
