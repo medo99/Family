@@ -47,12 +47,12 @@
 		<plugin name="cordova-plugin-splashscreen" />
 		<plugin name="cordova-plugin-whitelist" />
 		<plugin name="cordova-plugin-statusbar" />
-		<icon src="res/icon/android/icon-36-ldpi.png" platform="android" density="ldpi" />
-		<icon src="res/icon/android/icon-48-mdpi.png" platform="android" density="mdpi" />
-		<icon src="res/icon/android/icon-72-hdpi.png" platform="android" density="hdpi" />
-		<icon src="res/icon/android/icon-96-xhdpi.png" platform="android" density="xhdpi" />
-		<icon src="res/icon/android/icon-144-xxhdpi.png" platform="android" density="xxhdpi" />
-		<icon src="res/icon/android/icon-192-xxxhdpi.png" platform="android" density="xxxhdpi" />
+		<icon src="res/icon/android/mipmap-ldpi/ic_launcher.png" platform="android" density="ldpi" />
+		<icon src="res/icon/android/mipmap-mdpi/ic_launcher.png" platform="android" density="mdpi" />
+		<icon src="res/icon/android/mipmap-hdpi/ic_launcher.png" platform="android" density="hdpi" />
+		<icon src="res/icon/android/mipmap-xhdpi/ic_launcher.png" platform="android" density="xhdpi" />
+		<icon src="res/icon/android/mipmap-xxhdpi/ic_launcher.png" platform="android" density="xxhdpi" />
+		<icon src="res/icon/android/mipmap-xxxhdpi/ic_launcher.png" platform="android" density="xxxhdpi" />
 		<splash src="res/screen/android/screen-ldpi-portrait.png" platform="android" density="ldpi" />
 		<splash src="res/screen/android/screen-mdpi-portrait.png" platform="android" density="mdpi" />
 		<splash src="res/screen/android/screen-hdpi-portrait.png" platform="android" density="hdpi" />
