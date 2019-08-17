@@ -4,8 +4,8 @@
 		id        = "com.zanan.sa"
 		versionCode="1"
 		version   = "1.0.0">
-		<name>Familly</name>
-		<description>Zanan</description>
+		<name>ال زنان</name>
+		<description>تطبيق عائلة ال زنان</description>
 		<author href="http://www.saad.com" email="contact@saad.com">Saad</author>
 		<preference name="phonegap-version" value="cli-7.0.1" />
 		<preference name='pgb-builder-version' value='2' />
