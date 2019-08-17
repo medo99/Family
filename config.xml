@@ -9,7 +9,7 @@
 		<author href="http://www.saad.com" email="contact@saad.com">Saad</author>
 		<preference name="phonegap-version" value="cli-7.0.1" />
 		<preference name='pgb-builder-version' value='2' />
-		<preference name="orientation" value="portrait" />
+		<preference name="orientation" value="all" />
 		<preference name="fullscreen" value="true" />
 		<preference name="target-device" value="universal" />
 		<preference name="webviewbounce" value="true" />
