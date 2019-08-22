@@ -11,8 +11,8 @@ $(document).ready(function(){
     }
 
     function onBackKeyDown() {
-		history.go(-1);
-		navigator.app.backHistory();
+		var currentPage = window.location.href;
+		window.sessionStorage.setItem("page",currentPage);
 	}
 	
 											
@@ -28,7 +28,7 @@ $(document).ready(function(){
 	$('#m10').hide().show(300);
 	$('#m11').hide().show(300);
 
-	$('#menu1, #menu2, #menu3, #menu4, #menu5, #menu6, #menu7, #menu8, #menu9, #menu10', #menu11).hide();
+	$('#menu1, #menu2, #menu3, #menu4, #menu5, #menu6, #menu7, #menu8, #menu9, #menu10, #menu11').hide();
 	$('.menu_off').hide();
 	
 	$('.menu_on').click(function(){
