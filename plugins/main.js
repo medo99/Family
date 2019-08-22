@@ -11,8 +11,9 @@ $(document).ready(function(){
     }
 
     function onBackKeyDown() {
-		navigator.app.exitApp();
-    }
+		cordova.exec(null, null, "InAppBrowser", "injectScriptCode", ["history.back()"]);
+
+	}
 	
 											
 	$('#m1').hide().show(300);
