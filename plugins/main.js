@@ -11,8 +11,10 @@ $(document).ready(function(){
     }
 
     function onBackKeyDown() {
-		cordova.exec(null, null, "InAppBrowser", "injectScriptCode", ["history.back()"]);
-
+		//cordova.exec(null, null, "InAppBrowser", "injectScriptCode", ["history.back()"]);
+		var previouspage = window.sessionStorage.getItem("page");
+		var currentPage = window.location.href;
+		window.sessionStorage.setItem("page",currentPage);
 	}
 	
 											
