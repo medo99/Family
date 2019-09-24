@@ -43,7 +43,7 @@
     <preference name="AnimatedSplashScreenAnimationDuration" value="5" />
     <preference name="SplashScreen" value="none" />
     <preference name="AnimatedSplashScreenAnimationRepeatCount" value="0" />
-    <preference name="AnimatedSplashScreenAndroidImages" value="animated0,animated1" />
+    <preference name="AnimatedSplashScreenAndroidImages" value="animated0,animated1,animated2,animated3,animated4,animated5,animated6,animated7,animated8,animated9,animated10,animated11" />
 
 		<platform name="android" />
 		<feature name="http://api.phonegap.com/1.0/network"/>		
@@ -62,9 +62,18 @@
 	    <icon src="res/icon/android/icon-96-xhdpi.png" platform="android" density="xhdpi" />
 	   <icon src="res/icon/android/icon-144-xxhdpi.png" platform="android" density="xxhdpi" />
 	  <icon src="res/icon/android/icon-192-xxxhdpi.png" platform="android" density="xxxhdpi" />
-    <resource-file src="res/screen/android/xxxhdpi/frame0.png" target="app/src/main/res/drawable-port-xxxhdpi/animated0.png" />
-    <resource-file src="res/screen/android/xxxhdpi/frame1.png" target="app/src/main/res/drawable-port-xxxhdpi/animated1.png" />
-
+    <resource-file src="res/screen/android/ldpi/frame0.png" target="app/src/main/res/drawable-port-xxxhdpi/animated0.png" />
+    <resource-file src="res/screen/android/ldpi/frame1.png" target="app/src/main/res/drawable-port-xxxhdpi/animated1.png" />
+	<resource-file src="res/screen/android/mdpi/frame0.png" target="app/src/main/res/drawable-port-ldpi/animated2.png" />
+	<resource-file src="res/screen/android/mdpi/frame1.png" target="app/src/main/res/drawable-port-ldpi/animated3.png" />
+	<resource-file src="res/screen/android/hdpi/frame0.png" target="app/src/main/res/drawable-port-mdpi/animated4.png" />
+	<resource-file src="res/screen/android/hdpi/frame1.png" target="app/src/main/res/drawable-port-mdpi/animated5.png" />
+	<resource-file src="res/screen/android/xhdpi/frame0.png" target="app/src/main/res/drawable-port-hdpi/animated6.png" />
+	<resource-file src="res/screen/android/xhdpi/frame1.png" target="app/src/main/res/drawable-port-hdpi/animated7.png" />
+	<resource-file src="res/screen/android/xxhdpi/frame0.png" target="app/src/main/res/drawable-port-xhdpi/animated8.png" />
+	<resource-file src="res/screen/android/xxhdpi/frame1.png" target="app/src/main/res/drawable-port-xhdpi/animated9.png" />
+	<resource-file src="res/screen/android/xxxhdpi/frame0.png" target="app/src/main/res/drawable-port-xxhdpi/animated10.png" />
+	<resource-file src="res/screen/android/xxxhdpi/frame1.png" target="app/src/main/res/drawable-port-xxhdpi/animated11.png" />
 
 	<!-- port scape-->
 <!--	<splash src="res/screen/android/screen-ldpi-portrait.png" platform="android" density="port-ldpi" />
