@@ -62,18 +62,18 @@
 	    <icon src="res/icon/android/icon-96-xhdpi.png" platform="android" density="xhdpi" />
 	   <icon src="res/icon/android/icon-144-xxhdpi.png" platform="android" density="xxhdpi" />
 	  <icon src="res/icon/android/icon-192-xxxhdpi.png" platform="android" density="xxxhdpi" />
-    <resource-file src="res/screen/android/ldpi/animated_splash1.png" target="app/src/main/res/drawable-port-xxxhdpi/animated_splash1.png" />
-    <resource-file src="res/screen/android/ldpi/animated_splash2.png" target="app/src/main/res/drawable-port-xxxhdpi/animated_splash2.png" />
-	<resource-file src="res/screen/android/mdpi/animated_splash3.png" target="app/src/main/res/drawable-port-ldpi/animated_splash3.png" />
-	<resource-file src="res/screen/android/mdpi/animated_splash4.png" target="app/src/main/res/drawable-port-ldpi/animated_splash4.png" />
-	<resource-file src="res/screen/android/hdpi/animated_splash0.png" target="app/src/main/res/drawable-port-mdpi/animated_splash0.png" />
-	<resource-file src="res/screen/android/hdpi/animated_splash1.png" target="app/src/main/res/drawable-port-mdpi/animated_splash1.png" />
-	<resource-file src="res/screen/android/xhdpi/animated_splash5.png" target="app/src/main/res/drawable-port-hdpi/animated_splash5.png" />
-	<resource-file src="res/screen/android/xhdpi/animated_splash6.png" target="app/src/main/res/drawable-port-hdpi/animated_splash6.png" />
-	<resource-file src="res/screen/android/xxhdpi/animated_splash7.png" target="app/src/main/res/drawable-port-xhdpi/animated_splash7.png" />
-	<resource-file src="res/screen/android/xxhdpi/animated_splash8.png" target="app/src/main/res/drawable-port-xhdpi/animated_splash8.png" />
-	<resource-file src="res/screen/android/xxxhdpi/animated_splash9.png" target="app/src/main/res/drawable-port-xxhdpi/animated_splash9.png" />
-	<resource-file src="res/screen/android/xxxhdpi/animated_splash10.png" target="app/src/main/res/drawable-port-xxhdpi/animated_splash10.png" />
+    <resource-file src="res/screen/android/animated_splash1.png" target="app/src/main/res/drawable-port-xxxhdpi/animated_splash1.png" />
+    <resource-file src="res/screen/android/animated_splash2.png" target="app/src/main/res/drawable-port-xxxhdpi/animated_splash2.png" />
+	<resource-file src="res/screen/android/animated_splash3.png" target="app/src/main/res/drawable-port-ldpi/animated_splash3.png" />
+	<resource-file src="res/screen/android/animated_splash4.png" target="app/src/main/res/drawable-port-ldpi/animated_splash4.png" />
+	<resource-file src="res/screen/android/animated_splash0.png" target="app/src/main/res/drawable-port-mdpi/animated_splash0.png" />
+	<resource-file src="res/screen/android/animated_splash1.png" target="app/src/main/res/drawable-port-mdpi/animated_splash1.png" />
+	<resource-file src="res/screen/android/animated_splash5.png" target="app/src/main/res/drawable-port-hdpi/animated_splash5.png" />
+	<resource-file src="res/screen/android/animated_splash6.png" target="app/src/main/res/drawable-port-hdpi/animated_splash6.png" />
+	<resource-file src="res/screen/android/animated_splash7.png" target="app/src/main/res/drawable-port-xhdpi/animated_splash7.png" />
+	<resource-file src="res/screen/android/animated_splash8.png" target="app/src/main/res/drawable-port-xhdpi/animated_splash8.png" />
+	<resource-file src="res/screen/android/animated_splash9.png" target="app/src/main/res/drawable-port-xxhdpi/animated_splash9.png" />
+	<resource-file src="res/screen/android/animated_splash10.png" target="app/src/main/res/drawable-port-xxhdpi/animated_splash10.png" />
 
 	<!-- port scape-->
 <!--	<splash src="res/screen/android/screen-ldpi-portrait.png" platform="android" density="port-ldpi" />
