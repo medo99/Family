@@ -43,7 +43,7 @@
     <preference name="AnimatedSplashScreenAnimationDuration" value="5" />
     <preference name="SplashScreen" value="none" />
     <preference name="AnimatedSplashScreenAnimationRepeatCount" value="0" />
-    <preference name="AnimatedSplashScreenAndroidImages" value="animated1,animated2" />
+    <preference name="AnimatedSplashScreenAndroidImages" value="animated0,animated1" />
 
 		<platform name="android" />
 		<feature name="http://api.phonegap.com/1.0/network"/>		
@@ -63,7 +63,7 @@
 	   <icon src="res/icon/android/icon-144-xxhdpi.png" platform="android" density="xxhdpi" />
 	  <icon src="res/icon/android/icon-192-xxxhdpi.png" platform="android" density="xxxhdpi" />
     <resource-file src="res/screen/android/xxxhdpi/frame0.png" target="app/src/main/res/drawable-port-xxxhdpi/animated0.png" />
-    <resource-file src="res/screen/android/xxxhdpi/frame1.png" target="app/src/main/res/drawable-port-xxxhdpi/animated2.png" />
+    <resource-file src="res/screen/android/xxxhdpi/frame1.png" target="app/src/main/res/drawable-port-xxxhdpi/animated1.png" />
 	<!-- port scape-->
 <!--	<splash src="res/screen/android/screen-ldpi-portrait.png" platform="android" density="port-ldpi" />
 		<splash src="res/screen/android/screen-mdpi-portrait.png" platform="android" density="port-mdpi" />
