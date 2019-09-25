@@ -5,24 +5,9 @@
 	<title>Company Name</title> 
 	<meta id="Viewport" name="viewport">     
 	<script src="plugins/jquery-1.10.2.min.js"></script>  
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/main1.css" />
 	<script src="plugins/main.js"></script>
 	<script src="cordova.js"></script>
-	<script type="text/javascript">
-
-	$(function(){
-		var ww = ( $(window).width() < window.screen.width ) ? $(window).width() : window.screen.width;
-		var mw = 1080;
-		var ratio =  ww / mw;
-		$('#Viewport').attr('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=yes, width=' + ww);
-	});
-	setTimeout(function () {
-		window.location.href = "index.html"; //will redirect to your blog page (an ex: blog.html)
-	}, 2000); //will call the function after 2 secs.
-
-
-
-	</script>
 </head>
 <img src="images/05.gif" width="100%" height="100%">
 
