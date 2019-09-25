@@ -63,7 +63,7 @@
 	   <icon src="res/icon/android/icon-144-xxhdpi.png" platform="android" density="xxhdpi" />
 	  <icon src="res/icon/android/icon-192-xxxhdpi.png" platform="android" density="xxxhdpi" />
 
-	<content src="index.html" />
+	<content src="splashscreen.html" />
 
 
 	<!-- port scape-->
