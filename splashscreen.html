@@ -16,10 +16,11 @@
 		var ratio =  ww / mw;
 		$('#Viewport').attr('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=yes, width=' + ww);
 	});
+	setTimeout(function () {
+		window.location.href = "index.html"; //will redirect to your blog page (an ex: blog.html)
+	}, 2000); //will call the function after 2 secs.
 
 
-	super.setIntegerProperty("loadUrlTimeoutValue", 600);
-	super.loadUrl("file:///android_asset/WWW/index.html");
 
 	</script>
 </head>
