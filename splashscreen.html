@@ -6,11 +6,12 @@
 	<meta id="Viewport" name="viewport">     
 	<script src="plugins/jquery-1.10.2.min.js"></script>  
     <link rel="stylesheet" href="css/main.css" />
-    <script src="plugins/main1.js"></script>
 
     <script src="cordova.js"></script>
     <script type="text/javascript">
         $(function(){
+            $("body").fadeIn(6000);
+
             var ww = ( $(window).width() < window.screen.width ) ? $(window).width() : window.screen.width;
             var mw = 1080;
             var ratio =  ww / mw;
