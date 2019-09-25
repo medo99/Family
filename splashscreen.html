@@ -6,34 +6,19 @@
 	<meta id="Viewport" name="viewport">     
 	<script src="plugins/jquery-1.10.2.min.js"></script>  
     <link rel="stylesheet" href="css/main.css" />
-    <script src="cordova.js"></script>
+	<script src="plugins/main.js"></script>
+	<script src="cordova.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function(){
 
-			$("body").fadeIn(600);
-
-			document.addEventListener("deviceready", onDeviceReady, false);
-
-
-			function onDeviceReady() {
-
-				document.addEventListener("backbutton", onBackKeyDown, false);
-			}
+	$(function(){
+		var ww = ( $(window).width() < window.screen.width ) ? $(window).width() : window.screen.width;
+		var mw = 1080;
+		var ratio =  ww / mw;
+		$('#Viewport').attr('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=yes, width=' + ww);
+	});
 
 
-
-		});
-    $(function(){
-		  var ww = ( $(window).width() < window.screen.width ) ? $(window).width() : window.screen.width; 
-		  var mw = 1080;
-		  var ratio =  ww / mw;
-		  $('#Viewport').attr('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=yes, width=' + ww);
-	}); 
-		
-	document.addEventListener("deviceready", onDeviceReady, false);
-	function onDeviceReady() { StatusBar.hide(); }
-
-	super.setIntegerProperty("loadUrlTimeoutValue", 60000);
+	super.setIntegerProperty("loadUrlTimeoutValue", 600);
 	super.loadUrl("file:///android_asset/WWW/index.html");
 
 	</script>
