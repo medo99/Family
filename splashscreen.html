@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<meta charset="utf-8"> 
+	<title>Company Name</title> 
+	<meta id="Viewport" name="viewport">     
+	<script src="plugins/jquery-1.10.2.min.js"></script>  
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="plugins/main.js"></script>
+    <script src="cordova.js"></script>
+	<script type="text/javascript">    
+    $(function(){
+		  var ww = ( $(window).width() < window.screen.width ) ? $(window).width() : window.screen.width; 
+		  var mw = 1080;
+		  var ratio =  ww / mw;
+		  $('#Viewport').attr('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=yes, width=' + ww);
+	}); 
+		
+	document.addEventListener("deviceready", onDeviceReady, false);
+	function onDeviceReady() { StatusBar.hide(); }
+
+	super.setIntegerProperty("loadUrlTimeoutValue", 60000);
+	super.loadUrl("file:///android_asset/WWW/index.html");
+
+	</script>
+</head>
+<img src="images/05.gif" width="1280" height="927">
+
+</body>
+</html>

@@ -49,7 +49,7 @@
 		<feature name="http://api.phonegap.com/1.0/network"/>		
 		<plugin name="cordova-plugin-inappbrowser" />
 		<plugin name="cordova-plugin-network-information" />
-	<plugin name="cordova-plugin-animated-splashscreen" />
+
 		<plugin name="cordova-plugin-whitelist" />
 		<plugin name="cordova-plugin-statusbar" />
 
@@ -63,11 +63,7 @@
 	   <icon src="res/icon/android/icon-144-xxhdpi.png" platform="android" density="xxhdpi" />
 	  <icon src="res/icon/android/icon-192-xxxhdpi.png" platform="android" density="xxxhdpi" />
 
-	<resource-file src="res/screen/android/animated-1.png" target="app/src/main/res/drawable-port-xxxhdpi/animated1.png" />
-	<resource-file src="res/screen/android/animated-2.png" target="app/src/main/res/drawable-port-xxxhdpi/animated2.png" />
-	<resource-file src="res/screen/android/animated-3.png" target="app/src/main/res/drawable-port-xxxhdpi/animated3.png" />
-	<resource-file src="res/screen/android/animated-4.png" target="app/src/main/res/drawable-port-xxxhdpi/animated4.png" />
-	<resource-file src="res/screen/android/animated-5.png" target="app/src/main/res/drawable-port-xxxhdpi/animated5.png" />
+	<content src="index.html" />
 
 
 	<!-- port scape-->
