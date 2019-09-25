@@ -7,7 +7,22 @@
 	<script src="plugins/jquery-1.10.2.min.js"></script>  
     <link rel="stylesheet" href="css/main.css" />
     <script src="cordova.js"></script>
-	<script type="text/javascript">    
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$("body").fadeIn(600);
+
+			document.addEventListener("deviceready", onDeviceReady, false);
+
+
+			function onDeviceReady() {
+
+				document.addEventListener("backbutton", onBackKeyDown, false);
+			}
+
+
+
+		});
     $(function(){
 		  var ww = ( $(window).width() < window.screen.width ) ? $(window).width() : window.screen.width; 
 		  var mw = 1080;
