@@ -38,7 +38,7 @@ body {background-color:#000; display:none;}
 #iba_main {background-color:#eba85f !important; background:url(../images/main_bg.png) no-repeat; width:1080px; height:1920px; position:relative;}
 #iba_cc {background-color:#eba85f !important; background:url(../images/cc_bg.jpg) no-repeat; width:1080px; height:1920px; position:relative;} 
 
-.top_small {background:url(../images/top_small.png) no-repeat; width:1080px; height:285px; position:relative;}
+.top_small { width:1080px; height:285px; position:relative;}
 .logo_small {width:600px; height:286px; position:absolute; top:0px; left:240px;}	
 
 .menu2_bg {width:210px; height:147px; position:absolute; top:68px; right:0px;}
